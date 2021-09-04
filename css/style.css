@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+header.main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 30px;
+}
+
+header.main-header .main-header--logo img {
+  height: 20px;
+}
+
+header.main-header .main-header--user-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header.main-header .main-header--user-menu a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #777777;
+  text-decoration: none;
+}
+
+header.main-header .main-header--user-menu a:hover {
+  color: #333333;
+}
+
+header.main-header .main-header--user-menu a img {
+  width: 20px;
+  height: 20px;
+}
+
+header.main-header .main-header--user-menu > ul:first-child {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header.main-header .main-header--user-menu > ul:first-child li:first-child {
+  padding-right: 5px;
+}
+
+header.main-header .main-header--user-menu .lang-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
+}
+
+header.main-header .main-header--user-menu .lang-menu li {
+  padding: 0 5px;
+}
+
+header.main-header .main-header--user-menu .lang-menu li .select {
+  color: #a77556;
+}
+
+header.main-header .main-header--user-menu .lang-menu li:first-child {
+  border-right: 1px solid #cccccc;
+}
+
+header.main-header .main-header--user-menu img {
+  padding-left: 10px;
+  height: 20px;
+}
+
+nav.main-nav {
+  background-color: #222222;
+  height: 50px;
+}
+/*# sourceMappingURL=style.css.map */
