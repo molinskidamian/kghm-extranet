@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
+$green: rgba(55, 174, 142, 1);
+
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -8,7 +10,8 @@ body {
 header.main-header {
     display: flex;
     justify-content: space-between;
-    padding: 15px 30px;
+    padding: 0 30px;
+    align-items: center;
 
     .main-header--logo {
         // outline: 1px solid red;
@@ -19,9 +22,9 @@ header.main-header {
 
     .main-header--user-menu {
         display: flex;
-        height: 30px;
         align-items: center;
         // outline: 1px solid orange;
+        position: relative;
 
         a {
             font-size: 0.9rem;
@@ -42,9 +45,62 @@ header.main-header {
         & > ul:first-child {
             list-style: none;
             display: flex;
+            // outline: 1px dotted red;
+            line-height: 60px;
             align-items: center;
-            li:first-child {
-                padding-right: 5px;
+            padding-right: 10px;
+        }
+
+        li {
+            height: 60px;
+
+            ul {
+                // outline: 1px dashed blue;
+
+                li {
+                    // outline: 1px dashed red;
+                    background-color: rgba(231, 231, 231, 1);
+                    height: 30px;
+                    line-height: 30px;
+                    // background-color: #fff;
+                }
+            }
+        }
+
+        li.user-menu-active {
+            background-color: #e7e7e7;
+        }
+
+        & > ul > li > ul.submenu {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 60px;
+            width: 180px;
+            // outline: 1px dashed red;
+            list-style-type: none;
+            border: 1px solid rgba(197, 197, 197, 1);
+
+            li {
+                text-align: center;
+                font-size: 0.86;
+            }
+
+            & > li > a {
+                color: rgba(51, 51, 51, 1);
+                font-size: 0.85rem;
+                text-align: left;
+                font-weight: normal;
+                // width: 100%;
+                display: block;
+                padding-left: 20px;
+                &:hover {
+                    background-color: rgba(55, 174, 142, 1);
+                    color: #fff;
+                }
+            }
+            .user-category {
+                background-color: #fff;
             }
         }
 
@@ -52,18 +108,19 @@ header.main-header {
             display: flex;
             list-style-type: none;
             align-items: center;
-            padding-left: 10px;
+
+            line-height: 60px;
 
             li {
-                padding: 0 5px;
-
+                padding: 0 2px;
+                color: rgba(204, 204, 204, 1);
                 .select {
                     color: rgba(167, 117, 86, 1);
                 }
             }
 
             li:first-child {
-                border-right: 1px solid rgba(204, 204, 204, 1);
+                // border-right: 1px solid rgba(204, 204, 204, 1);
             }
         }
 
@@ -74,7 +131,46 @@ header.main-header {
     }
 }
 
-nav.main-nav {
+nav.main-nav-wrapper {
     background-color: rgba(34, 34, 34, 1);
     height: 50px;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+        height: 50px;
+        line-height: 50px;
+        display: flex;
+        text-align: center;
+
+        li {
+            padding: 0 15px;
+        }
+
+        &:first-child > li {
+            // padding: 0 15px;
+            border-right: 1px solid rgba(85, 85, 85, 1);
+
+            a:link,
+            a:visited {
+                color: #fff;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.9rem;
+            }
+
+            a:hover {
+                color: $green;
+            }
+        }
+
+        &:nth-child(2) li {
+            color: white;
+
+            &:hover {
+                color: $green;
+            }
+        }
+    }
 }

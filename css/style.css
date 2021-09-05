@@ -11,7 +11,10 @@ header.main-header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 15px 30px;
+  padding: 0 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header.main-header .main-header--logo img {
@@ -22,10 +25,10 @@ header.main-header .main-header--user-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 header.main-header .main-header--user-menu a {
@@ -49,13 +52,58 @@ header.main-header .main-header--user-menu > ul:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  line-height: 60px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-right: 10px;
 }
 
-header.main-header .main-header--user-menu > ul:first-child li:first-child {
-  padding-right: 5px;
+header.main-header .main-header--user-menu li {
+  height: 60px;
+}
+
+header.main-header .main-header--user-menu li ul li {
+  background-color: #e7e7e7;
+  height: 30px;
+  line-height: 30px;
+}
+
+header.main-header .main-header--user-menu li.user-menu-active {
+  background-color: #e7e7e7;
+}
+
+header.main-header .main-header--user-menu > ul > li > ul.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 180px;
+  list-style-type: none;
+  border: 1px solid #c5c5c5;
+}
+
+header.main-header .main-header--user-menu > ul > li > ul.submenu li {
+  text-align: center;
+  font-size: 0.86;
+}
+
+header.main-header .main-header--user-menu > ul > li > ul.submenu > li > a {
+  color: #333333;
+  font-size: 0.85rem;
+  text-align: left;
+  font-weight: normal;
+  display: block;
+  padding-left: 20px;
+}
+
+header.main-header .main-header--user-menu > ul > li > ul.submenu > li > a:hover {
+  background-color: #37ae8e;
+  color: #fff;
+}
+
+header.main-header .main-header--user-menu > ul > li > ul.submenu .user-category {
+  background-color: #fff;
 }
 
 header.main-header .main-header--user-menu .lang-menu {
@@ -66,19 +114,16 @@ header.main-header .main-header--user-menu .lang-menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 10px;
+  line-height: 60px;
 }
 
 header.main-header .main-header--user-menu .lang-menu li {
-  padding: 0 5px;
+  padding: 0 2px;
+  color: #cccccc;
 }
 
 header.main-header .main-header--user-menu .lang-menu li .select {
   color: #a77556;
-}
-
-header.main-header .main-header--user-menu .lang-menu li:first-child {
-  border-right: 1px solid #cccccc;
 }
 
 header.main-header .main-header--user-menu img {
@@ -86,8 +131,52 @@ header.main-header .main-header--user-menu img {
   height: 20px;
 }
 
-nav.main-nav {
+nav.main-nav-wrapper {
   background-color: #222222;
   height: 50px;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav.main-nav-wrapper ul {
+  height: 50px;
+  line-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+nav.main-nav-wrapper ul li {
+  padding: 0 15px;
+}
+
+nav.main-nav-wrapper ul:first-child > li {
+  border-right: 1px solid #555555;
+}
+
+nav.main-nav-wrapper ul:first-child > li a:link,
+nav.main-nav-wrapper ul:first-child > li a:visited {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+nav.main-nav-wrapper ul:first-child > li a:hover {
+  color: #37ae8e;
+}
+
+nav.main-nav-wrapper ul:nth-child(2) li {
+  color: white;
+}
+
+nav.main-nav-wrapper ul:nth-child(2) li:hover {
+  color: #37ae8e;
 }
 /*# sourceMappingURL=style.css.map */
