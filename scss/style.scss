@@ -4,6 +4,8 @@ $green: rgba(55, 174, 142, 1);
 $greenBorder: rgba(0, 150, 121, 1);
 $blackBgMenu: rgba(34, 34, 34, 1);
 $greyFontNav: rgba(221, 221, 221, 1);
+$greyFooter: #f0f0f0;
+$colorCu: rgba(167, 117, 86, 1);
 
 body {
     font-family: "Montserrat", sans-serif;
@@ -282,4 +284,34 @@ section.nav-submenu {
 
 section.submenu-active {
     display: block;
+}
+
+footer.footer {
+    height: 70px;
+    padding: 15px;
+    background-color: $greyFooter;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > ul {
+        list-style: none;
+        display: flex;
+
+        a:link,
+        a:visited {
+            color: $green;
+            text-decoration: none;
+        }
+
+        li {
+            padding: 0 2px;
+            color: rgba(51, 51, 51, 1);
+
+            .select-lang {
+                color: $colorCu;
+                font-weight: 600;
+            }
+        }
+    }
 }

@@ -312,4 +312,42 @@ section.nav-submenu div.nav-submenu--down > ul li:nth-child(2) {
 section.submenu-active {
   display: block;
 }
+
+footer.footer {
+  height: 70px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer.footer > ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer.footer > ul a:link,
+footer.footer > ul a:visited {
+  color: #37ae8e;
+  text-decoration: none;
+}
+
+footer.footer > ul li {
+  padding: 0 2px;
+  color: #333333;
+}
+
+footer.footer > ul li .select-lang {
+  color: #a77556;
+  font-weight: 600;
+}
 /*# sourceMappingURL=style.css.map */
