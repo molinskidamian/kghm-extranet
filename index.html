@@ -8,8 +8,64 @@
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/bootstrap.css" />
         <link rel="stylesheet" href="./css/style.css" />
+        <style>
+            div.col-sm-1 {
+                outline: 1px dashed red;
+            }
+        </style>
     </head>
     <body>
+        <header class="main-header container-fluid">
+            <div class="row align-items-center">
+                <div class="col-sm-4 align-self-center">
+                    <img
+                        class="main-logo"
+                        src="./assets/img/Logo2.png"
+                        alt="KGHM TO MY"
+                    />
+                </div>
+                <div class="col-sm-4 d-flex justify-content-end">
+                    <a href="#">Damian Moliński</a>
+                    <ul class="lang-menu list-inline">
+                        <li class="list-inline-item">
+                            <a class="selected" href="#">PL</a>
+                        </li>
+                        <li class="list-inline-item">|</li>
+                        <li class="list-inline-item"><a href="#">EN</a></li>
+                    </ul>
+                    <img
+                        class="main-logo-small"
+                        src="./assets/img/KGHM_PM_small.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+        </header>
+
+        <nav class="main-navbar">
+            <ul>
+                <li>
+                    <a href="#"><i class="fas fa-home"></i></a>
+                </li>
+                <li><a href="#">O KGHM</a></li>
+                <li><a href="#">Pracownik</a></li>
+                <li><a href="#">BHP</a></li>
+                <li><a href="#">Dokumenty</a></li>
+                <li><a href="#">Intranety</a></li>
+                <li><a href="#">Społeczności</a></li>
+                <li><a href="#">Zarządzanie wiedzą</a></li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+        </nav>
+
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
             integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"

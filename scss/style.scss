@@ -6,8 +6,87 @@ $blackBgMenu: rgba(34, 34, 34, 1);
 $greyFontNav: rgba(221, 221, 221, 1);
 $greyFooter: #f0f0f0;
 $colorCu: rgba(167, 117, 86, 1);
+$colorLink: rgba(119, 119, 119, 1);
+$colorLinkHover: rgba(51, 51, 51, 1);
 
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
+}
+
+@media (max-width: 900px) {
+    nav.main-navbar {
+        ul:nth-child(1) {
+            display: none;
+        }
+    }
+}
+
+header.main-header {
+    height: 50px;
+    line-height: 50px;
+
+    img {
+        height: 20px;
+        width: auto;
+    }
+
+    img.main-logo {
+        margin-top: 0;
+        margin-left: 15px;
+    }
+
+    img.main-logo-small {
+        margin: 15px 15px 15px 0;
+    }
+
+    .lang-menu {
+        list-style: none;
+        margin: 0 15px;
+        li {
+            margin: 0 3px;
+
+            .selected {
+                color: $colorCu;
+                font-weight: 700;
+            }
+        }
+    }
+
+    a {
+        color: $colorLink;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+            color: $colorLinkHover;
+        }
+    }
+}
+
+nav.main-navbar {
+    height: 50px;
+    line-height: 50px;
+    background-color: $blackBgMenu;
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+        padding: 0;
+        display: flex;
+        li {
+            padding: 0 8px;
+
+            a:link,
+            a:visited {
+                color: white;
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: $green;
+            }
+        }
+    }
 }
