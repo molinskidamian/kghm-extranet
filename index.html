@@ -1,81 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Extranet KGHM</title>
-        <link rel="stylesheet" href="./css/reset.css" />
-        <link rel="stylesheet" href="./css/bootstrap.css" />
-        <link rel="stylesheet" href="./css/style.css" />
-        <style>
-            div.col-sm-1 {
-                outline: 1px dashed red;
-            }
-        </style>
-    </head>
-    <body>
-        <header class="main-header container-fluid">
-            <div class="row align-items-center">
-                <div class="col-sm-4 align-self-center">
-                    <img
-                        class="main-logo"
-                        src="./assets/img/Logo2.png"
-                        alt="KGHM TO MY"
-                    />
-                </div>
-                <div class="col-sm-4 d-flex justify-content-end">
-                    <a href="#">Damian Moliński</a>
-                    <ul class="lang-menu list-inline">
-                        <li class="list-inline-item">
-                            <a class="selected" href="#">PL</a>
-                        </li>
-                        <li class="list-inline-item">|</li>
-                        <li class="list-inline-item"><a href="#">EN</a></li>
-                    </ul>
-                    <img
-                        class="main-logo-small"
-                        src="./assets/img/KGHM_PM_small.png"
-                        alt=""
-                    />
-                </div>
-            </div>
-        </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Extranet KGHM</title>
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/bootstrap.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<header class="main-header">
+			<div class="main-header--left">
+				<img class="main-logo" src="./assets/img/Logo2.png" alt="KGHM TO MY" />
+			</div>
+			<div class="main-header--right">
+				<ul>
+					<li class="main-header--userMenu">
+						<a href="#">Damian Moliński</a>
+						<ul class="subMenu">
+							<li class="subMenu--item">
+								<a class="subMenu--link label" href="#">Moje konto</a>
+							</li>
+							<li class="subMenu--item">
+								<a class="subMenu--link label" href="#">Profil pracownika</a>
+							</li>
+							<li class="subMenu--item title">Moje witryny</li>
+							<li class="subMenu--item">
+								<a class="subMenu--link item" href="#">ZGPS</a>
+							</li>
+							<li class="subMenu--item">
+								<a class="subMenu--link item" href="#">My Corporation</a>
+							</li>
+							<li class="subMenu--item">
+								<a class="subMenu--link item" href="#">Extranet</a>
+							</li>
+							<li class="subMenu--item">
+								<a class="subMenu--link item" href="#">KGHM to my</a>
+							</li>
+							<li class="subMenu--item">
+								<a class="subMenu--link item" href="#">Pomysłowi</a>
+							</li>
+							<li class="subMenu--item">
+								<a class="subMenu--link item" href="#">SITG ZGPS</a>
+							</li>
+							<li class="subMenu--item">
+								<a class="subMenu--link item" href="#">Umowy</a>
+							</li>
+							<li class="subMenu--item">
+								<a class="subMenu--link label" href="#">Wyloguj</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="selected" href="#">PL</a>
+					</li>
+					<li>|</li>
+					<li><a href="#">EN</a></li>
+					<li>
+						<img class="main-logo-small" src="./assets/img/KGHM_PM_small.png" alt="" />
+					</li>
+				</ul>
+			</div>
+		</header>
 
-        <nav class="main-navbar">
-            <ul>
-                <li>
-                    <a href="#"><i class="fas fa-home"></i></a>
-                </li>
-                <li><a href="#">O KGHM</a></li>
-                <li><a href="#">Pracownik</a></li>
-                <li><a href="#">BHP</a></li>
-                <li><a href="#">Dokumenty</a></li>
-                <li><a href="#">Intranety</a></li>
-                <li><a href="#">Społeczności</a></li>
-                <li><a href="#">Zarządzanie wiedzą</a></li>
-            </ul>
+		<nav class="main-navbar">
+			<ul>
+				<li>
+					<a href="#"><i class="fas fa-home"></i></a>
+				</li>
+				<li><a href="#">O KGHM</a></li>
+				<li><a href="#">Pracownik</a></li>
+				<li><a href="#">BHP</a></li>
+				<li><a href="#">Dokumenty</a></li>
+				<li><a href="#">Intranety</a></li>
+				<li><a href="#">Społeczności</a></li>
+				<li><a href="#">Zarządzanie wiedzą</a></li>
+			</ul>
 
-            <ul>
-                <li>
-                    <a href="#"><i class="fas fa-search"></i></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-bars"></i></a>
-                </li>
-            </ul>
-        </nav>
+			<ul class="mobile-menu">
+				<li>
+					<a href="#"><i class="fas fa-search"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="menu fas fa-bars"></i></a>
+				</li>
+			</ul>
+		</nav>
+		<div class="main-navbar-subMenu">
+			<div class="menus-wrapper">
+				<ul class="menu">
+					<li class="title">
+						<a href="#">O KGHM<i class="fas fa-arrow-right"></i></a>
+					</li>
+					<li><a href="#">Władze</a></li>
+					<li><a href="#">Historia</a></li>
+					<li><a href="#">Profil działalności</a></li>
+					<li><a href="#">Raport Zintegrowany 2015</a></li>
+					<li><a href="#">Marka</a></li>
+					<li><a href="#">Wartości</a></li>
+					<li><a href="#">Galeria mutimediów</a></li>
+				</ul>
+				<ul class="menu">
+					<li class="title">
+						<a href="#">Pracownik<i class="fas fa-arrow-right"></i></a>
+					</li>
+					<li><a href="#">Kadry i płace</a></li>
+					<li><a href="#">Sprawy socjalne</a></li>
+					<li><a href="#">Zarządzanie talentami</a></li>
+					<li><a href="#">Mobilność międzynarodowa</a></li>
+				</ul>
+				<ul class="menu">
+					<li class="title">
+						<a href="#">BHP<i class="fas fa-arrow-right"></i></a>
+					</li>
+					<li><a href="#">Nasz program poprawy BHP</a></li>
+					<li><a href="#">Nasz kontrakt BHP</a></li>
+					<li><a href="#">Opisy wypadków</a></li>
+					<li><a href="#">Filmy</a></li>
+				</ul>
+				<ul class="menu">
+					<li class="title">
+						<a href="#">Dokumenty<i class="fas fa-arrow-right"></i></a>
+					</li>
+				</ul>
+				<ul class="menu">
+					<li class="title">
+						<a href="#">Intranety<i class="fas fa-arrow-right"></i></a>
+					</li>
+				</ul>
+				<ul class="menu">
+					<li class="title">
+						<a href="#">Społeczności<i class="fas fa-arrow-right"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ullam dignissimos, veniam
+			accusantium vero voluptas accusamus sed corrupti non obcaecati esse quis maxime ab enim
+			officia ipsam. Laboriosam, veniam unde!
+		</div>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-            integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
-            crossorigin="anonymous"
-        ></script>
-        <script src="./js/bootstrap.js"></script>
-        <script
-            src="https://kit.fontawesome.com/6e30b4ae66.js"
-            crossorigin="anonymous"
-        ></script>
-        <script src="./js/scripts.js"></script>
-    </body>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+			integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+			crossorigin="anonymous"
+		></script>
+		<script src="./js/bootstrap.js"></script>
+		<script src="https://kit.fontawesome.com/6e30b4ae66.js" crossorigin="anonymous"></script>
+		<script src="./js/scripts.js"></script>
+		<script src="./js/toggleMenu.js"></script>
+		<script src="./js/main-navbar/toggleMenu.js"></script>
+	</body>
 </html>

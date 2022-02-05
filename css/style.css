@@ -1,55 +1,137 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
 }
 
 @media (max-width: 900px) {
+  .main-header--userMenu {
+    display: none;
+  }
   nav.main-navbar ul:nth-child(1) {
     display: none;
   }
 }
 
-header.main-header {
+.main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  padding: 0 1rem;
+}
+
+.main-header--left img {
+  height: 20px;
+}
+
+.main-header--right {
   height: 50px;
   line-height: 50px;
 }
 
-header.main-header img {
-  height: 20px;
-  width: auto;
-}
-
-header.main-header img.main-logo {
-  margin-top: 0;
-  margin-left: 15px;
-}
-
-header.main-header img.main-logo-small {
-  margin: 15px 15px 15px 0;
-}
-
-header.main-header .lang-menu {
+.main-header--right ul {
   list-style: none;
-  margin: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-header.main-header .lang-menu li {
-  margin: 0 3px;
+.main-header--right ul li {
+  display: block;
+  padding: 0 3px;
 }
 
-header.main-header .lang-menu li .selected {
+.main-header--right ul li:hover > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #333333;
+}
+
+.main-header--right ul li:first-child {
+  padding: 0 1rem;
+  position: relative;
+}
+
+.main-header--right ul li .subMenu {
+  position: absolute;
+  opacity: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  -webkit-transition: opacity 0.12s ease;
+  transition: opacity 0.12s ease;
+  border: 1px solid #c5c5c5;
+  background-color: #fff;
+}
+
+.main-header--right ul li .subMenu--item {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 1.6rem;
+  font-size: 0.8rem;
+}
+
+.main-header--right ul li .subMenu--item .label {
+  width: 100%;
+  background-color: #fff;
+}
+
+.main-header--right ul li .subMenu--item .label:hover {
+  background-color: #f5f5f5;
+}
+
+.main-header--right ul li .subMenu--item .title {
+  background-color: #e7e7e7;
+  width: 100%;
+}
+
+.main-header--right ul li .subMenu--item .item {
+  display: block;
+  background-color: #e7e7e7;
+  width: 100%;
+  height: 100%;
+}
+
+.main-header--right ul li .subMenu--item .item:hover {
+  background-color: #37ae8e;
+}
+
+.main-header--right ul li .subMenu--item--link {
+  font-weight: 400;
+  height: 100%;
+  width: 100%;
+}
+
+.main-header--right ul .selected {
   color: #a77556;
   font-weight: 700;
 }
 
-header.main-header a {
+.main-header img.main-logo-small {
+  margin-left: 15px;
+  height: 1.6rem;
+}
+
+.main-header a {
   color: #777777;
   text-decoration: none;
   font-weight: 600;
 }
 
-header.main-header a:hover {
+.main-header a:hover {
   color: #333333;
 }
 
@@ -70,10 +152,18 @@ nav.main-navbar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
 }
 
 nav.main-navbar ul li {
   padding: 0 8px;
+  border-right: 1px solid #555555;
+  padding: 0 1rem;
+  line-height: 50px;
+}
+
+nav.main-navbar ul li:last-child {
+  border: none;
 }
 
 nav.main-navbar ul li a:link,
@@ -81,9 +171,64 @@ nav.main-navbar ul li a:visited {
   color: white;
   font-weight: 600;
   text-decoration: none;
+  font-size: 0.9rem;
 }
 
 nav.main-navbar ul li a:hover {
   color: #37ae8e;
+}
+
+.main-navbar-subMenu {
+  opacity: 0;
+  height: 0px;
+}
+
+.main-navbar-subMenu .menus-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+}
+
+.main-navbar-subMenu .menus-wrapper ul {
+  list-style: none;
+  padding: 0;
+}
+
+.main-navbar-subMenu .menus-wrapper ul li:first-child {
+  color: white;
+  font-weight: 800;
+  margin-left: -1rem;
+}
+
+.main-navbar-subMenu .menus-wrapper ul li a:link,
+.main-navbar-subMenu .menus-wrapper ul li a:visited {
+  color: #dddddd;
+  text-decoration: none;
+  font-size: 0.87rem;
+  margin-left: 1rem;
+}
+
+.main-navbar-subMenu .menus-wrapper ul li a:link i,
+.main-navbar-subMenu .menus-wrapper ul li a:visited i {
+  margin-left: 0.4rem;
+}
+
+.main-navbar-subMenu .menus-wrapper ul li a:hover {
+  text-decoration: underline;
+  color: #04ae8f;
+}
+
+.isOpen {
+  opacity: 1;
+  height: 500px;
+  width: 100vw;
+  background-color: #222222;
+  color: #fff;
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
